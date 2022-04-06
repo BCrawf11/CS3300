@@ -1,3 +1,3 @@
-class Project < ApplicationRecord
-  validates_presence_of :title, :description
-end
+class Projects < ApplicationRecord
+    validates_presence_of :title, :description
+  end

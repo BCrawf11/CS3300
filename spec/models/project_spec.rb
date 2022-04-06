@@ -1,19 +1,19 @@
 require "rails_helper"
 
-RSpec.describe Project, type: :model do
+RSpec.describe Projects, type: :model do
   context "validations tests" do
     it "ensures the title is present" do
-      project = Project.new(description: "Content of the description")
+      project = Projects.new(description: "Content of the description")
       expect(project.valid?).to eq(false)
     end
 
     it "ensures the description is present" do
-      project = Project.new(title: "Title")
+      project = Projects.new(title: "Title")
       expect(project.valid?).to eq(false)
     end
     
     it "should be able to save project" do
-      project = Project.new(title: "Title", description: "Some description content goes here")
+      project = Projects.new(title: "Title", description: "Some description content goes here")
       expect(project.save).to eq(true)
     end
   end
@@ -21,13 +21,13 @@ RSpec.describe Project, type: :model do
   context "scopes tests" do
     let(:params) { { title: "Title", description: "some description" } }
     before(:each) do
-      Project.create(params)
-      Project.create(params)
-      Project.create(params)
+      Projects.create(params)
+      Projects.create(params)
+      Projects.create(params)
     end
 
     it "should return all projects" do
-      expect(Project.count).to eq(3)
+      expect(Projects.count).to eq(3)
     end
 
   end

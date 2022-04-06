@@ -29,3 +29,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Added coverage directory to .gitignore file. 4/6/22
+/coverage

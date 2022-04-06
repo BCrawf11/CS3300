@@ -49,6 +49,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Added rspec rails gem to Gemfile. 4/4/22
   gem 'rspec-rails', '~> 3.7'
+  # Added capybara gem to Gemfile. 4/6/22
+  gem 'capybara'
 end
 
 group :development do
@@ -62,10 +64,13 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
+  #gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+
+  # Added simplecov gem to Gemfile. 4/6/22
+  gem 'simplecov', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

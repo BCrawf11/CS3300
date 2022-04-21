@@ -53,7 +53,9 @@ group :development, :test do
   # Added rspec rails gem to Gemfile. 4/4/22
   gem 'rspec-rails', '~> 3.7'
   # Added capybara gem to Gemfile. 4/6/22
-  gem 'capybara'
+  gem 'capybara', '>= 2.15'
+  # Added factorybot gem to Gemfile. 4/20/22
+  gem 'factory_bot_rails'
 end
 
 group :development do

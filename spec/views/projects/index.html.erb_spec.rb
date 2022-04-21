@@ -13,6 +13,7 @@ RSpec.describe "projects/index", type: :view do
       )
     ])
   end
+  
   user = FactoryBot.build(:user)
   user.valid? do
     it "renders a list of projects" do

@@ -16,6 +16,11 @@ SimpleCov.start 'rails' do
   add_filter '/db/'
   add_filter '/spec/' # for rspec
   add_filter 'app/channels/application_cable/' # Added application cable filter. 4/6/22
+
+  # Added more filters. 4/21/22
+  add_filter 'app/helpers'
+  add_filter 'app/mailers'
+  add_filter 'app/jobs'
 end
 
 # Added devise requirements. 4/20/22

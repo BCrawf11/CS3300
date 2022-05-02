@@ -45,12 +45,12 @@ gem 'mini_racer'
 # Added devise gem to Gemfile. 4/19/22
 gem 'devise'
 
-  # Added bootstrap gem to Gemfile. 5/2/22
-  gem 'bootstrap', '~> 4.6.1'
-  # Added jquery-rails gem to Gemfile. 5/2/22
-  gem 'jquery-rails'
-  # Added popper js gem to Gemfile. 5/2/22
-  gem 'popper_js', '~> 1.14.3'
+# Added bootstrap gem to Gemfile. 5/2/22
+gem 'bootstrap', '~> 4.6.1'
+# Added jquery-rails gem to Gemfile. 5/2/22
+gem 'jquery-rails'
+# Added popper js gem to Gemfile. 5/2/22
+gem 'popper_js', '~> 1.14.3'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record

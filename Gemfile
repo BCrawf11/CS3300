@@ -60,6 +60,8 @@ group :development, :test do
   gem 'bootstrap', '~> 4.6.1'
   # Added jquery-rails gem to Gemfile. 5/2/22
   gem 'jquery-rails'
+  # Added popper js gem to Gemfile. 5/2/22
+  gem 'popper_js', '~> 2.9.3'
 end
 
 group :development do

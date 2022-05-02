@@ -56,6 +56,10 @@ group :development, :test do
   gem 'capybara', '>= 2.15'
   # Added factorybot gem to Gemfile. 4/20/22
   gem 'factory_bot_rails'
+  # Added bootstrap gem to Gemfile. 5/2/22
+  gem 'bootstrap', '~> 4.6.1'
+  # Added jquery-rails gem to Gemfile. 5/2/22
+  gem 'jquery-rails'
 end
 
 group :development do

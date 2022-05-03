@@ -40,7 +40,7 @@ end
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # Added mini racer gem to Gemfile. 4/4/22
-gem 'mini_racer', '~> 0.6.0'
+gem 'mini_racer'
 
 # Added devise gem to Gemfile. 4/19/22
 gem 'devise'

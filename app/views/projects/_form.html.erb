@@ -9,32 +9,49 @@
     }
 </style>
 
-<%= form_with(model: project, local: true) do |form| %>
-  <% if project.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+<style>
+body {
+    background-color:lightgray;
+}
+.centerPage {
+  vertical-align: middle;
+  text-align: center;
+  margin-top: 7%;
+}
+</style>
 
-      <ul>
-      <% project.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+<center>
+  <div class="card text-white bg-secondary mb-3" style="max-width: 32rem;">
+    <div class="card-body">
+      <%= form_with(model: project, local: true) do |form| %>
+        <% if project.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+            <ul>
+            <% project.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="field">
+          <%= form.label :title %>
+          <br>
+          <%= form.text_field :title %>
+        </div>
+
+        <div class="field">
+          <%= form.label :description %>
+          <br>
+          <%= form.text_area :description, rows: 5, cols: 60 %>
+        </div>
+          
+        <div class="actions">
+          <%= form.submit %>
+        </div>
       <% end %>
-      </ul>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <br>
-    <%= form.text_field :title %>
   </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <br>
-    <%= form.text_area :description, rows: 5, cols: 60 %>
-  </div>
-    
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</center>

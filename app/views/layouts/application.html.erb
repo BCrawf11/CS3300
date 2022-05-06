@@ -31,14 +31,16 @@
           <div class="row">
               <div class="col-2 col-sm-2 col-md-2"></div>
               <div class="col-4 col-sm-4 col-md-4" style="line-height: 1em;">
+                  <br><br>
                   <h4 class="text-white">About</h4>
-                  <p.not() class="text-muted" style="font-size:12px;"> My name is Brodie, and I'm a UCCS Student pursuing a degree in computer science with 7+ years of 
+                  <p.not() class="text-white" style="font-size:12px;"> My name is Brodie, and I'm a UCCS Student pursuing a degree in computer science with 7+ years of 
                   soccer referee experience (outdoors and indoors) and a comprehensive skillset in coding that I’ve been actively growing since the start of high school. 
                   I also held a position as a camp counselor for one summer – and I enjoy hiking, mountain biking, rock climbing, and playing soccer in my free time.
                   </p>
               </div>
               <div class="col-2 col-sm-2 col-md-2"></div>
               <div class="col-4 col-sm-4 col-md-4">
+                  <br>
                   <h4 class="text-white">Contact</h4>
                   <ul class="list-unstyled">
                       <li><a href="https://github.com/BCrawf11" class="text-white">Check out my Github</a></li>
@@ -64,6 +66,9 @@
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="/projects/new" style="font-size:18px;">New Project</a>
+              </li>
+              <li class="nav-item navbar-nav">
+                <a class="nav-link" style="color:white" >|&nbsp&nbsp&nbsp&nbspLogged in as <strong><%= current_user.email %>.</strong></a>
               </li>
 
             <% else %>

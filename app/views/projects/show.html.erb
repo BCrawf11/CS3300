@@ -1,19 +1,30 @@
-<p id="notice"><%= notice %></p>
+<style>
+body {
+    background-color:lightgray;
+}
+.centerPage {
+  vertical-align: middle;
+  text-align: center;
+  margin-top: 7%;
+}
+</style>
 
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
+<center>
+  <div class="card text-white bg-secondary mb-3 centerPage" style="max-width: 32rem;">
+    <div class="card-header" style="height: 4rem;"><h2><%= @project.title %></h2></div>
+      <div class="card-body">
+      <p class="card-text"><%= @project.description %></p>
+    </div>
+  </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
+  <% if user_signed_in? %>
+    <a class="btn btn-secondary" style="color:white;" <%= link_to 'Edit', edit_project_path(@project) %>
+    <a class="btn btn-secondary" style="color:white;" <%= link_to 'Delete', @project, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <a class="btn btn-secondary" style="color:white;" <%= link_to 'Back', projects_path %>
+  <% else %>
+    <a class="btn btn-secondary" style="color:white;" <%= link_to 'Back', projects_path %>
+  <% end %>
 
-<% if user_signed_in? %>
-  <%= link_to 'Edit', edit_project_path(@project) %> |
-  <%= link_to 'Delete', @project, method: :delete, data: { confirm: 'Are you sure?' } %> |
-  <%= link_to 'Back', projects_path %>
-<% else %>
-  <%= link_to 'Back', projects_path %>
-<% end %>
+  <p class="centerPage" style="color:green;" id="notice"><b><%= notice %></b></p>
+
+</center>

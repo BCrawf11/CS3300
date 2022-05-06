@@ -1,6 +1,28 @@
-<h1>Editing Project</h1>
+<center>
+    <br>
+    <h1>Editing Project</h1>
+    <br>
+</center>
 
-<%= render 'form', project: @project %>
+<style>
+body {
+    background-color:lightgray;
+}
+.centerPage {
+  vertical-align: middle;
+  text-align: center;
+  margin-top: 7%;
+}
+</style>
 
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+<center>
+  <div class="card text-white bg-secondary mb-3" style="max-width: 32rem;">
+      <div class="card-body">
+      <%= render 'form', project: @project %>
+    </div>
+  </div>
+
+    <a class="btn btn-secondary" style="color:white;" <%= link_to 'Show', @project %>
+    <a class="btn btn-secondary" style="color:white;" <%= link_to 'Delete', @project, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <a class="btn btn-secondary" style="color:white;" <%= link_to 'Back', projects_path %>
+</center>

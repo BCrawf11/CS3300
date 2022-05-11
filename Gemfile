@@ -52,6 +52,10 @@ gem 'jquery-rails'
 # Added popper js gem to Gemfile. 5/2/22
 gem 'popper_js', '~> 1.14.3'
 
+# Added webdriver and chromedriver gems to Gemfile. 5/11/22
+gem 'selenium-webdriver'
+gem 'chromedriver-helper'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
@@ -63,6 +67,8 @@ group :development, :test do
   gem 'capybara', '>= 2.15'
   # Added factorybot gem to Gemfile. 4/20/22
   gem 'factory_bot_rails'
+  # Added web driver gem to Gemfile. 5/11/22
+  gem 'webdrivers'
 end
 
 group :development do

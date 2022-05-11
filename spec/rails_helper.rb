@@ -21,12 +21,19 @@ SimpleCov.start 'rails' do
   add_filter 'app/helpers'
   add_filter 'app/mailers'
   add_filter 'app/jobs'
+
+  # Added another filter. 5/11/22
+  add_filter 'app/models/user.rb'
 end
 
 # Added devise requirements. 4/20/22
 require 'devise'
 require File.expand_path("spec/support/controller_macros.rb")
 require_relative 'support/controller_macros'
+
+# Added factory_bot and chrome requirements. 5/11/22
+require_relative 'support/chrome'
+require_relative 'support/factory_bot'
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -60,6 +67,7 @@ RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include Devise::Test::IntegrationHelpers, type: :request
+  config.include Warden::Test::Helpers
   config.extend ControllerMacros, :type => :controller
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your

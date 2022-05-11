@@ -33,7 +33,7 @@
               <div class="col-4 col-sm-4 col-md-4" style="line-height: 1em;">
                   <br><br>
                   <h4 class="text-white">About</h4>
-                  <p.not() class="text-white" style="font-size:12px;"> My name is Brodie, and I'm a UCCS Student pursuing a degree in computer science with 7+ years of 
+                  <p.not() class="text-white" style="font-size:14px;"> My name is Brodie, and I'm a UCCS Student pursuing a degree in computer science with 7+ years of 
                   soccer referee experience (outdoors and indoors) and a comprehensive skillset in coding that I’ve been actively growing since the start of high school. 
                   I also held a position as a camp counselor for one summer – and I enjoy hiking, mountain biking, rock climbing, and playing soccer in my free time.
                   </p>
@@ -81,6 +81,12 @@
               <li class="nav-item" style="font-size:18px;">
                 <a class="nav-link" href="/users/sign_up">Sign Up</a>
               </li>
+              <li class="nav-item navbar-nav">
+                <a class="nav-link">|&nbsp</a>
+              </li>
+              <li class="nav-item navbar-nav">
+                <a class="nav-link" style="color:green;" id="notice"><b><%= notice %></b></a>
+              </li>
 
             <% end %>
           </ul>
@@ -94,16 +100,17 @@
                   </button>
               </div>
 
-              <% if user_signed_in? %>
-                  <li class="nav-item navbar-nav" style="color:white; font-size:18px;">
-                      <a class="nav-link" href="users/edit">My Account</a>
-                  </li>
-                  <li class="nav-item navbar-nav" style="color:white; font-size:18px;">
-                    <a class="nav-link" rel="nofollow" data-method="delete" href="/users/sign_out">Sign Out</a>
-                  </li>
-
-              <% end %>
           </div>
+
+          <% if user_signed_in? %>
+              <li class="nav-item navbar-nav" style="color:white; font-size:18px;">
+                  <a class="nav-link" href="/users/edit">My Account</a>
+              </li>
+              <li class="nav-item navbar-nav" style="color:white; font-size:18px;">
+                <a class="nav-link" rel="nofollow" data-method="delete" href="/users/sign_out">Sign Out</a>
+              </li>
+          <% end %>
+
         </div>
       </nav>
     </header>

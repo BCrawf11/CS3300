@@ -7,47 +7,50 @@
     box-shadow: 0 0 0 1px #000;
     border: 1px solid transparent;
     }
-</style>
 
-<style>
-body {
+    body {
     background-color:lightgray;
-}
-.centerPage {
-  vertical-align: middle;
-  text-align: center;
-  margin-top: 7%;
-}
+    }
 </style>
 
 <center>
-  <div class="card text-white bg-secondary mb-3" style="max-width: 32rem;">
+  <div class="card text-white bg-secondary mb-3" style="max-width: 36rem;">
     <div class="card-body">
       <%= form_with(model: project, local: true) do |form| %>
         <% if project.errors.any? %>
           <div id="error_explanation">
             <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
 
-            <ul>
             <% project.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
+              <h6><%= message %></h6>
             <% end %>
-            </ul>
+            <br>
+
           </div>
         <% end %>
+        
+        <div class="field">
+          <h2 style="color:black">Project</h2>
+        </div>
 
         <div class="field">
           <%= form.label :title %>
           <br>
           <%= form.text_field :title %>
         </div>
+        <br>
 
         <div class="field">
           <%= form.label :description %>
           <br>
           <%= form.text_area :description, rows: 5, cols: 60 %>
         </div>
-          
+        
+        <div class="field">
+          <i>This information can be edited at any time!</i>
+        </div>
+        <br>
+
         <div class="actions">
           <%= form.submit %>
         </div>
